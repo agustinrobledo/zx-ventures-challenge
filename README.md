@@ -4,6 +4,7 @@ El proyecto se ejecuta corriendo los siguientes comandos:
 Para correr el servidor: 
 <br>
 - npm run server
+<br>
 Para correr el frontend: 
 <br> 
 - npm run start
