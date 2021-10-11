@@ -1,6 +1,5 @@
 import Navbar from "../../components/Navbar"
 import Detail from "../../components/Detail"
-
 export default function productDetails({product}) {
     return (
         <>

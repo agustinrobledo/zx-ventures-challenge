@@ -2,26 +2,26 @@ import { CardStyle, Button } from "./cardStyled";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../../actions";
 import Link from "next/link";
-export default function Card(props) {
+export default function Card({product}) {
   const dispatch = useDispatch();
   const handleClick = () => {
-    dispatch(addToCart(props));
+    dispatch(addToCart(product));
   };
   const cart = useSelector((state) => state.products);
   return (
-    <CardStyle key={props.id}>
-        <img src={props.image ? props.image : "https://www.eluniversal.com.mx/sites/default/files/2020/04/28/sabor-cerveza.jpg"}/>
+    <CardStyle key={product.product_id}>
+        <img src={product.image_url ? product.image_url : "https://www.eluniversal.com.mx/sites/default/files/2020/04/28/sabor-cerveza.jpg"}/>
         <h3 
         >
-          <Link href={`/product/${props.id}`}>
-            {props.name}
+          <Link href={`/product/${product.product_id}`}>
+            {product.name}
           </Link>
           </h3>
-        <p>${props.price}</p>
+        <p>${product.total_price}</p>
         
-        {cart?.find((item) => item.id === props.id) ? (
+        {cart?.find((item) => item.product_id === product.product_id) ? (
           <Button
-            onClick={() => dispatch(removeFromCart(props))}
+            onClick={() => dispatch(removeFromCart(product))}
           >
             Eliminar del carrito
           </Button>

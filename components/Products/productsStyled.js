@@ -5,11 +5,15 @@ export const FlexCard = styled.div`
     justify-content: space-between;
     `;
 export const FilterButtons = styled.div`
-    
     display: flex;
-    width: 20%;
-    justify-content: space-between;
-    margin: 12vh auto;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 12vh;
+    margin-bottom: 2rem;
+        @media (max-width: 768px) {
+            margin-top: 15vh;
+        }
     `;
 
 export const Button = styled.button`

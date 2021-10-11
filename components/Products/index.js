@@ -1,11 +1,15 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Card from "../Card"
+import { categories } from "../../actions"
 import { FlexCard, FilterButtons, Button } from "./productsStyled"
-
+import { useDispatch, useSelector } from "react-redux"
 export default function Products ({products}) {
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(categories())
+    }, [])
     const [filterProduct, setFilterProduct] = useState("")
     const [allProducts, setAllProducts] = useState(products)
-   
     function handleFilter (e) {
         setFilterProduct(e.target.value)
     }
@@ -13,26 +17,22 @@ export default function Products ({products}) {
         return product.categories?.includes(filterProduct.toLowerCase())
     })
     if (filterProduct.length === 0) filteredProducts = allProducts;
-
+    const categoriesList = useSelector(state => state.categories)
 
 
     return (
         <>
             <FilterButtons>
-                <Button value="" onClick={handleFilter}>Todos</Button>
-                <Button value="vinos" onClick={handleFilter}>Vinos</Button>
-                <Button value="cervezas" onClick={handleFilter}>Cervezas</Button>
+                <Button onClick={handleFilter} value="">todos</Button>
+                {categoriesList.map(category => 
+                <Button key={category} onClick={handleFilter} value={category}>{category}</Button>)}
             </FilterButtons>
 
             <FlexCard>
                 {allProducts ? 
                     filteredProducts.map(product => (
                         <Card
-                            key={product.product_id}
-                            id={product.product_id}
-                            image={product.image_url ? product.image_url : "https://via.placeholder.com/150"}
-                            name={product.name}
-                            price={product.total_price}
+                            product={product}
                         />
                     )
                 )

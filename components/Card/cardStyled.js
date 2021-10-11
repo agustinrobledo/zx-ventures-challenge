@@ -10,6 +10,10 @@ export const CardStyle = styled.div`
     align-items: center;
     margin-bottom: 1rem;
     text-align: center;
+    @media (max-width: 768px) {
+        width: 100%;
+        margin: 0 auto;
+    }
     p{
         color: white;
         font-size: 1.5rem;
@@ -34,6 +38,7 @@ export const Button = styled.button`
     color: white;
     margin-bottom: 1rem;
     font-weight: 400;
+    transition: 0.2s linear;
     :hover {
         background-color: #00a3ea;
     }

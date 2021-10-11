@@ -1,5 +1,7 @@
 const initialState = {
     products: [],
+    recommendations: [],
+    categories: [],
   };
   
   export const rootReducer = (state = initialState, action) => {
@@ -9,8 +11,16 @@ const initialState = {
             products: [...state.products, action.payload]
         }
         case 'REMOVE_FROM_CART':
-        return { 
-            products: state.products.filter(product => product.id !== action.payload.id)
+        return {...state,
+            products: state.products.filter(product => product.product_id !== action.payload.product_id)
+        }
+        case 'RECOMMENDATIONS':
+        return {...state,
+            recommendations: action.payload
+        }
+        case 'CATEGORIES':
+        return {...state,
+            categories: action.payload
         }
         default:
         return state;

@@ -1,14 +1,15 @@
 import styled from "styled-components";
 export const Header = styled.header`
-background: #333;
-color: white;
+font-family: "Roboto", sans-serif;
+color: black;
 padding: 2rem 0;
 position: fixed;
 left: 0%;
 top:0%;
 width: 100%;
+background: white;
 a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 div{
@@ -17,73 +18,30 @@ div{
     align-items: center;
     flex-wrap: wrap;
 }
+ul {
+margin: 0;
+padding: 0;
+list-style: none;
+  li{
+      margin-right: 2rem;
+      display: inline-block ;
+      a{
+      background: #ff5747;
+      display: block;
+      padding: 0.5rem 1rem;
+      transition: 0.2s linear;
+      border-radius: 5px;
+      color: white;
+        :hover{
+        background: #00a3ea
+      }
+    }
+  }
+}
 `;
 export const Logo = styled.div`
-    letter-spacing: 15px;
     font-size: 1.2em;
     margin-left: 2rem;
+    font-weight: bold;
 `;
-
-export const StyledUl = styled.ul`
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-`;
-
-export const StyledLi = styled.li`
-  float: left;
-`;
-
-export const Dropbtn = styled.div`
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-family: Lato, sans-serif;
-`;
-
-export const DropDownContent = styled.div`
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-`;
-
-export const DropDownLi = styled(StyledLi)`
-  display: inline-block;
-  &:hover {
-    background-color: red;
-  }
-  &:hover ${DropDownContent} {
-    display: block;
-  }
-`;
-
-export const StyledA = styled.a`
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  &:hover {
-    background-color: red;
-  }
-`;
-
-export const SubA = styled.a`
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  &:hover {
-    background-color: #f1f1f1;
-  }
-`;
-
 
