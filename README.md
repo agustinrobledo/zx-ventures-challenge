@@ -2,7 +2,7 @@ Este es un challenge realizado por zx-ventures.
 El proyecto se ejecuta corriendo los siguientes comandos:
 <br><br>
 Para correr el servidor: 
-<br> 
+<br>
 - npm run server
 Para correr el frontend: 
 <br> 
