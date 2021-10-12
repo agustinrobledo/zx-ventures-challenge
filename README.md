@@ -1,4 +1,4 @@
-Este es un challenge realizado por zx-ventures. 
+Este es un challenge realizado por <strong>zx-ventures</strong>. 
 El proyecto se ejecuta corriendo los siguientes comandos:
 <br><br>
 Para correr el servidor: 
@@ -8,7 +8,7 @@ Para correr el servidor:
 Para correr el frontend: 
 <br> 
 - npm run start
-<br><br>
+<br>
 El proyecto consiste en un E-commerce muy basico, donde se muestra un listado de productos, con sus respectivos filtrados,
 detalle del producto, recomendaciones y un carrito de compras. Para el mismo se utilizaron tecnologías tales como: 
 - Next.js
