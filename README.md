@@ -10,7 +10,8 @@ Para correr el frontend:
 - npm run start
 <br>
 El proyecto consiste en un E-commerce muy basico, donde se muestra un listado de productos, con sus respectivos filtrados,
-detalle del producto, recomendaciones y un carrito de compras. Para el mismo se utilizaron tecnologías tales como: 
+detalle del producto, recomendaciones y un carrito de compras. Para el mismo se utilizaron tecnologías tales como:
+<br>
 - Next.js
 - React
 - Redux
