@@ -12,6 +12,13 @@ export const CartStyled = styled.div`
     padding: 1rem;
     background-color: #005aba;
     margin-top: 12vh;
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-top: 15vh;
+        h1{
+            font-size: 1rem;
+        }
+    }
     a{
         color: white;
         text-decoration: none;
